@@ -1,0 +1,35 @@
+# Start from the latest Ubuntu 20.04 base image
+FROM ubuntu:20.04
+
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update the package lists
+RUN apt-get update
+
+# Install gcc, g++, and MPI library
+RUN apt-get install -y gcc g++ openmpi-bin openmpi-common libopenmpi-dev
+
+# Reset to normal operation
+ENV DEBIAN_FRONTEND=
+
+# Create a new user, 'newuser'
+RUN useradd -ms /bin/bash newuser
+
+# Copy the current directory (assumed to contain the source code) into the Docker image
+COPY . /app
+
+# Set the ownership of the /app directory to 'newuser'
+RUN chown -R newuser:newuser /app
+
+# Switch to 'newuser'
+USER newuser
+
+# Set the working directory to where the source code was copied
+WORKDIR /app
+
+# Compile the code
+RUN mpicc -o MPI_version MPI_version.c
+
+# Command to run when launching the container
+CMD ["mpirun", "-np", "4", "./MPI_version"]

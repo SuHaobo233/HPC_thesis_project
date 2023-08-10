@@ -1,0 +1,14 @@
+# Use an existing docker image as a base
+FROM gcc:latest
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the current directory contents into the container at /usr/src/app
+COPY . .
+
+# Compile the C program with OpenMP enabled
+RUN gcc -fopenmp openmp.c -o openmp
+
+# Run the output program when the container launches
+CMD ["./openmp"]

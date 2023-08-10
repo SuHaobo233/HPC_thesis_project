@@ -1,0 +1,14 @@
+# Use an official gcc runtime as a parent image
+FROM gcc:latest
+
+# Set the working directory in the container to /app
+WORKDIR /app
+
+# Copy the current directory contents into the container at /app
+ADD . /app
+
+# Compile the C program
+RUN gcc -o serial serial.c
+
+# Run the output program when the container launches
+CMD ["./serial"]
