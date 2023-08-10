@@ -2,33 +2,38 @@
 MATRIX MULTIPLICATION IN DISTRIBUTED SYSTEMS
 This project encompasses several parallel and serial versions of programs, implemented using MPI, OpenMP, and standard serial programming techniques.
 
-#File List
-1. Dockerfiles
+**File List**
+
+**1**. Dockerfiles
 The project contains several Dockerfiles meant for setting up execution environments.
 
-Dockerfile.mpi: Establishes an environment that supports MPI (Message Passing Interface).
-Dockerfile.openmp: Sets up an environment that supports OpenMP.
-Dockerfile.serialcode: Creates an environment for executing serial code.
+- `Dockerfile.mpi`: Establishes an environment that supports MPI (Message Passing Interface).
+- `Dockerfile.openmp`: Sets up an environment that supports OpenMP.
+- `Dockerfile.serialcode`: Creates an environment for executing serial code.
 
-2. Code Files
-MPI_version.c: A parallel version of the code implemented using MPI.
-openmp.c: A parallel version of the code implemented using OpenMP.
-serial.c: A serial version of the code.
+**2**. Code Files
+- `MPI_version.c`: A parallel version of the code implemented using MPI.
+- `openmp.c`: A parallel version of the code implemented using OpenMP.
+- `serial.c`: A serial version of the code.
 
-3. Makefile
-A generic Makefile for compiling the aforementioned C code files.
+**3**. Makefile
+A generic `Makefile` for compiling the aforementioned C code files.
 
-Compilation and Execution
-Compilation
+## Compilation and Execution
+
+### Compilation
 Compile all the source code files using:
+
 $make
 
-Running with Docker
+
+### Running with Docker
 To use the Dockerfiles and run the programs:
 
-Build the Docker image:
+1. Build the Docker image:
 
 For MPI:
+
 $docker build -t mpi_image -f Dockerfile.mpi .
 
 For Opnemp:
