@@ -1,5 +1,4 @@
-# HPC_thesis_project
-MATRIX MULTIPLICATION IN DISTRIBUTED SYSTEMS
+# MATRIX MULTIPLICATION IN DISTRIBUTED SYSTEMS
 This project encompasses several parallel and serial versions of programs, implemented using MPI, OpenMP, and standard serial programming techniques.
 
 **File List**
@@ -23,9 +22,9 @@ A generic `Makefile` for compiling the aforementioned C code files.
 
 ### Compilation
 Compile all the source code files using:
-
+```
 $make
-
+```
 
 ### Running with Docker
 To use the Dockerfiles and run the programs:
@@ -33,24 +32,30 @@ To use the Dockerfiles and run the programs:
 1. Build the Docker image:
 
 For MPI:
-
+```
 $docker build -t mpi_image -f Dockerfile.mpi .
-
+```
 For Opnemp:
+```
 $docker build -t openmp_image -f Dockerfile.openmp .
-
+```
 For serial code:
+```
 $docker build -t serial_image -f Dockerfile.serialcode .
-
+```
 2.Run the Docker container:
 
 For MPI:
+```
 $docker run mpi_image mpirun -np 4 ./MPI_version
-
+```
 For Opnmp:
+```
 $docker run openmp_image ./openmp
+```
 
 For serial code:
+```
 $docker run serial_image ./serial
-
+```
 
