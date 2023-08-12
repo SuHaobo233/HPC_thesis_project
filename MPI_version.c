@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <mpi.h>
 
-#define N 500//128//256 
+#define N 500
+//128//256 
 //try on 8/16/64 cores
 
 int main(int argc, char* argv[])
