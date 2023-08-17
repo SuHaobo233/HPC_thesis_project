@@ -29,7 +29,12 @@ $make
 ### Running with Docker
 To use the Dockerfiles and run the programs:
 
-1. Build the Docker image:
+1.Download Docke this is the link:
+```
+https://www.docker.com/products/docker-desktop/
+```
+
+2. Build the Docker image:
 
 For MPI:
 ```
@@ -43,7 +48,7 @@ For serial code:
 ```
 $docker build -t serial_image -f Dockerfile.serialcode .
 ```
-2.Run the Docker container:
+3.Run the Docker container:
 
 For MPI:
 ```
