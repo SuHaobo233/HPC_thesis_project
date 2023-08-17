@@ -34,7 +34,7 @@ To use the Dockerfiles and run the programs:
 https://www.docker.com/products/docker-desktop/
 ```
 
-2. Build the Docker image:
+2. Build the Docker image in terminal(if used Mac):
 
 For MPI:
 ```
