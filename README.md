@@ -25,6 +25,22 @@ Compile all the source code files using:
 ```
 $make
 ```
+Compile the serial code
+```
+$./serila
+```
+
+Compile the Openmp
+```
+./openmp
+```
+
+
+Compile the MPI code
+```
+mpiexec -np 4 ./MPI_version
+```
+
 
 ### Running with Docker
 To use the Dockerfiles and run the programs:
