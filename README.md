@@ -23,7 +23,7 @@ A generic `Makefile` for compiling the aforementioned C code files.
 ### Compilation
 Compile all the source code files using:
 ```
-$make
+$make(if use chuck pleas the command "module load intel" first to make sure the compiler understands the MPI command.)
 ```
 Compile the serial code
 ```
