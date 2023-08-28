@@ -57,7 +57,7 @@ int main()
             }
         }
     }
-}
+
 
         if(error < eps*eps){
             printf("Converged in %d iterations\n", iter);
